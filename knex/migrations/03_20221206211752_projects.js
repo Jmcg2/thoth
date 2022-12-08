@@ -2,22 +2,23 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-export function up(knex) {
-	knex.schema.createTable('projects', (table) => {
+exports.up = function (knex) {
+	return knex.schema.createTable('projects', (table) => {
 		table.increments();
-		table.string('name', 255);
+		table.string('project_name');
+		table.integer('shop_id');
 		table.foreign('shop_id').references('shops.id');
 		table.specificType('tags', 'text ARRAY');
-		table.specificType('langs', 'text ARRAY');
-		table.string('description');
+		table.specificType('lang', 'text ARRAY');
+		table.text('short_desc');
 	});
-}
+};
 
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-export function down(knex) {
+exports.down = function (knex) {
 	return knex.schema
 		.alterTable('projects', (table) => {
 			table.dropForeign('shop_id');
@@ -25,4 +26,4 @@ export function down(knex) {
 		.then(() => {
 			return knex.schema.dropTableIfExists('projects');
 		});
-}
+};

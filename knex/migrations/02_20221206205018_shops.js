@@ -2,22 +2,24 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-export function up(knex) {
+exports.up = function (knex) {
 	return knex.schema.createTable('shops', (table) => {
 		table.increments();
+		table.integer('branch_id');
 		table.foreign('branch_id').references('branches.id');
-		table.string('name', 255);
-		table.string('description');
-		table.string('location', 255);
-		table.string('contact');
+		table.text('name');
+		table.text('description');
+		table.text('location');
+		table.text('contact');
+		table.text('img');
 	});
-}
+};
 
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-export function down(knex) {
+exports.down = function (knex) {
 	return knex.schema
 		.alterTable('shops', (table) => {
 			table.dropForeign('branch_id');
@@ -25,4 +27,4 @@ export function down(knex) {
 		.then(() => {
 			return knex.schema.dropTableIfExists('shops');
 		});
-}
+};

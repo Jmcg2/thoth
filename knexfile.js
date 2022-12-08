@@ -4,7 +4,7 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-export default {
+module.exports = {
 	development: {
 		client: 'postgresql',
 		connection: {
@@ -13,6 +13,12 @@ export default {
 			user: 'postgres',
 			password: 'docker',
 			database: 'thoth'
+		},
+		migrations: {
+			directory: './knex/migrations'
+		},
+		seeds: {
+			directory: './knex/seeds'
 		}
 	},
 
@@ -44,11 +50,7 @@ export default {
 			max: 10
 		},
 		migrations: {
-			tableName: 'knex_migrations',
-			directory: './knex/migrations'
-		},
-		seeds: {
-			directory: './knex/seeds'
+			tableName: 'knex_migrations'
 		}
 	}
 };

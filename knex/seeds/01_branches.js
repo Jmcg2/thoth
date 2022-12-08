@@ -2,7 +2,7 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-export async function seed(knex) {
+exports.seed = async function (knex) {
 	// Deletes ALL existing entries
 	await knex('branches').del();
 	await knex('branches').insert([
@@ -12,4 +12,4 @@ export async function seed(knex) {
 		{ name: 'Space Force' },
 		{ name: 'Marines' }
 	]);
-}
+};
