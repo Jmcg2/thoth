@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
 	content: [
 		'./src/pages/*.{js,ts,jsx,tsx}',
@@ -9,8 +12,23 @@ module.exports = {
 		extend: {
 			grayscale: {
 				60: '60%'
+			},
+			textShadow: {
+				DEFAULT:
+					'-1px -1px 0 var(--tw-shadow-color), 1px -1px 0 var(--tw-shadow-color), -1px 1px 0 var(--tw-shadow-color), 1px 1px 0 var(--tw-shadow-color)'
 			}
 		}
 	},
-	plugins: []
+	plugins: [
+		plugin(function ({ matchUtilities, theme }) {
+			matchUtilities(
+				{
+					'text-shadow': (value) => ({
+						textShadow: value
+					})
+				},
+				{ values: theme('textShadow') }
+			);
+		})
+	]
 };

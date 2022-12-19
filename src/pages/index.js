@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Home({ shops }) {
 	return (
-		<div className="flex justify-around flex-wrap ">
+		<div className="flex justify-start flex-wrap w-full">
 			{shops.map((shop) => (
 				<div
 					className="relative p-2 rounded-lg shadow-lg bg-white m-2 group"
@@ -15,7 +15,7 @@ export default function Home({ shops }) {
 						width={400}
 						height={400}
 					/>
-					<p className="text-white text-4xl hidden group-hover:absolute top-1/2 right-0 left-0 z-0 p-0 m-auto w-full h-full group-hover:block">
+					<p className="text-white text-4xl hidden group-hover:absolute top-1/2 text-center right-0 z-0 p-0 w-full h-full group-hover:block text-shadow shadow-black font-bold">
 						{shop.name}
 					</p>
 				</div>
