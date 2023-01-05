@@ -1,4 +1,4 @@
-import db from '../../knex/knex';
+import db from '../../../knex/knex';
 
 const handleProjects = async (req, res) => {
 	const data = await db('projects')
