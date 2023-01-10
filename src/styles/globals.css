@@ -7,10 +7,14 @@
 		@apply bg-slate-50 text-gray-900 dark:bg-black dark:text-gray-100;
 		/* @apply text-white; */
 	}
+	input[type='search']::-webkit-calendar-picker-indicator {
+		display: none;
+		opacity: 0;
+	}
 }
 
 .btn {
-	@apply bg-slate-700 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded;
+	@apply bg-slate-700 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded h-10;
 }
 
 .card {

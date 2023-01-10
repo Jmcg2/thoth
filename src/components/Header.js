@@ -1,81 +1,29 @@
-import { useState, useEffect } from 'react';
+import ThemeButton from './ThemeButton';
 import { useRouter } from 'next/router';
-import useSWRImmutable from 'swr';
-import { useTheme } from 'next-themes';
-import { ArrowLeftIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline';
-
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { useCallback, useRef, useState } from 'react';
+import Dropdown from './Dropdown';
 
 const Header = () => {
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		setMounted(true);
-	}, []);
-	const { systemTheme, theme, setTheme } = useTheme();
-
-	const renderThemeChanger = () => {
-		if (!mounted) return null;
-		const currentTheme = theme === 'system' ? systemTheme : theme;
-
-		if (currentTheme === 'dark') {
-			return (
-				<SunIcon
-					className="w-8 h-8"
-					role="button"
-					onClick={() => setTheme('light')}
-				/>
-			);
-		} else {
-			return (
-				<MoonIcon
-					className="w-8 h-8"
-					role="button"
-					onClick={() => setTheme('dark')}
-				/>
-			);
-		}
-	};
-
 	const router = useRouter();
 	const path = router.pathname;
 
-	const { data } = useSWRImmutable('/api/get_auto_terms', fetcher, {
-		revalidateIfStale: false,
-		revalidateOnFocus: false,
-		revalidateOnReconnect: false
-	});
+	const [searchValue, setSearchValue] = useState('');
+	const searchRef = useRef(null);
+	const [query, setQuery] = useState('');
+	const [active, setActive] = useState(false);
+	const [results, setResults] = useState([]);
 
 	return (
 		<>
-			<div className="flex flex-col h-40 w-full max-w-screen-2xl mx-auto top-0 sticky z-10 bg-slate-900">
-				<h1
-					className="text-white text-5xl text-center mt-4 hover:cursor-pointer"
-					onClick={() => router.push('/shops')}>
-					SorftWair Shoops
-				</h1>
-				<div className="w-full mt-6 ">
-					<button
-						className={`btn absolute left-3 ${
-							path !== '/' ? 'visible' : 'invisible'
-						}`}
-						onClick={() => {
-							router.back();
-						}}>
-						<ArrowLeftIcon className="h-8 w-8 flex-shrink-0" />
-					</button>
-					<input
-						className="w-1/2 py-2 px-2 rounded text-black absolute right-1/4 focus:outline-none"
-						list="autocomplete-data"
-						type="text"></input>
-					<datalist id="autocomplete-data">
-						{data?.map((term, index) => (
-							<option key={index} value={term} />
-						))}
-					</datalist>
-					<button className="btn absolute right-3">
-						{renderThemeChanger()}
-					</button>
+			<div className="flex justify-around h-20 w-full top-0 sticky z-10 bg-slate-600 dark:bg-slate-800">
+				<div className="flex justify-between my-auto w-11/12">
+					<h1
+						className="text-white text-4xl hover:cursor-pointer"
+						onClick={() => router.push('/shops')}>
+						SORFTWAIR SHOOPS
+					</h1>
+					<ThemeButton />
 				</div>
 			</div>
 		</>
@@ -83,3 +31,24 @@ const Header = () => {
 };
 
 export default Header;
+
+{
+	/* <div className="flex flex-nowrap flex-col h-40 w-full   mx-auto top-0 sticky z-10 bg-slate-600 dark:bg-slate-800">
+				<h1
+					className="text-white text-5xl mx-auto mt-4 hover:cursor-pointer w-auto"
+					onClick={() => router.push('/shops')}>
+					SorftWair Shoops
+				</h1>
+				<div className="flex justify-around w-11/12 mx-auto mt-6 ">
+					 <button
+						className={`btn  ${path !== '/' ? 'visible' : 'invisible'}`}
+						onClick={() => {
+							router.back();
+						}}>
+						<ArrowLeftIcon className="h-6 w-6 flex-shrink-0" />
+					</button>
+					<Dropdown />
+					<ThemeButton />
+				</div>
+			</div> */
+}

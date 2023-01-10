@@ -1,29 +1,50 @@
 import handleShops from '../../../src/helpers/getShops';
-import Image from 'next/image';
-import Link from 'next/link';
+// import handleShopsProjects from '../../../src/helpers/getShopProject';
+import CardList from '../../components/CardList';
+import Dropdown from '../../components/Dropdown';
+import { useState } from 'react';
 
 export default function Shops({ shops }) {
+	const [searchValue, setSearchValue] = useState('');
+
+	let filteredShops = shops.filter((shop) => {
+		let searchQuery = Object.values(shop)
+			// Check each of the values to see if it is an array
+			.map((item) => {
+				// Item is array
+				if (Array.isArray(item)) {
+					// If the items in the array are strings, return the strings
+					if (typeof item[0] === 'string') {
+						return item.toUpperCase();
+						// If the items inside of the array are also arrays get the values from the objects in that array
+					} else {
+						return item.map((arrItem) => Object.values(arrItem));
+					}
+					// Item is not an array just return the string
+				} else {
+					return item;
+				}
+			})
+			// convert multidimensional array to a single level array
+			.flat(3);
+
+		if (searchQuery === '') return shop;
+		if (searchQuery.join().toUpperCase().includes(searchValue.toUpperCase()))
+			return shop;
+	});
+
 	return (
-		<div className="flex justify-start flex-wrap w-11/12 mx-auto overflow-hidden">
-			{shops.map((shop, index) => (
-				<Link
-					href={`/shops/${shop.name}`}
-					className="relative p-2 rounded-lg  bg-slate-800 hover:bg-slate-700 m-2 group"
-					key={shop.id}>
-					<Image
-						className="group-hover:blur-md group-hover:grayscale-60 transition ease-in-out p-5"
-						src={`/images/${shop.img}.png`}
-						alt="shop logo"
-						width={400}
-						height={400}
-						priority={index <= 1}
-					/>
-					<p className="text-white text-4xl hidden group-hover:absolute top-1/2 text-center right-0 z-0 p-0 w-full h-full group-hover:block text-shadow shadow-black font-bold">
-						{shop.name}
-					</p>
-				</Link>
-			))}
-		</div>
+		<>
+			<div className="mt-5 w-11/12 mx-auto">
+				<Dropdown
+					className="mx-auto"
+					onChange={(e) => {
+						setSearchValue(e.target.value);
+					}}
+				/>
+			</div>
+			<CardList data={filteredShops} />
+		</>
 	);
 }
 
