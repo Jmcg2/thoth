@@ -8,7 +8,7 @@ const handleAutoTerms = async (req, res) => {
 		if (typeof value === 'string') return value.toUpperCase();
 	});
 
-	let uniqueTerms = [...new Set(UpperCaseValues)];
+	let uniqueTerms = [...new Set(UpperCaseValues.sort())];
 	res.status(200).json(uniqueTerms);
 };
 
