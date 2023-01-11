@@ -5,10 +5,10 @@ const Card = ({ data, index, data_type }) => {
 	return (
 		<Link
 			href={`/shops/${data.name}`}
-			className="relative p-2 rounded-lg  bg-slate-800 hover:bg-slate-700 group max-w-md"
+			className="relative p-2 rounded-lg  bg-slate-600 dark:bg-slate-800 hover:bg-slate-700 group max-w-md w-full mx-auto"
 			key={index}>
 			<Image
-				className="group-hover:blur-md group-hover:grayscale-60 transition ease-in-out p-5 mx-auto"
+				className="group-hover:blur-md group-hover:grayscale-60 transition ease-in-out p-5 mx-auto w-full h-full"
 				src={`/images/${
 					data_type === 'Shop'
 						? data.img

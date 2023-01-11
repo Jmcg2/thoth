@@ -18,5 +18,5 @@
 }
 
 .card {
-	@apply bg-slate-300 dark:bg-slate-800 w-11/12 mx-auto rounded-xl;
+	@apply bg-slate-400 dark:bg-slate-900 w-11/12 mx-auto rounded-xl;
 }

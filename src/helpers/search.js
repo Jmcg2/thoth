@@ -7,7 +7,7 @@ const search = (dataArr, searchValue) => {
 				if (Array.isArray(item)) {
 					// If the items in the array are strings, return the strings
 					if (typeof item[0] === 'string') {
-						return item.toUpperCase();
+						return item;
 						// If the items inside of the array are also arrays get the values from the objects in that array
 					} else {
 						return item.map((arrItem) => Object.values(arrItem));
