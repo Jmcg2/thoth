@@ -1,5 +1,5 @@
 import { createMocks } from 'node-mocks-http';
-import handleProjects from '../pages/api/get_projects';
+import termHandler from '../pages/api/get_auto_terms';
 
 describe('/api/get_shops', () => {
 	test('return 5 shop objects', async () => {
@@ -7,8 +7,8 @@ describe('/api/get_shops', () => {
 			method: 'GET'
 		});
 
-		await handleProjects(req, res);
+		await termHandler(req, res);
 		expect(res._getStatusCode()).toBe(200);
-		expect(JSON.parse(res._getData())).toHaveLength(24);
+		expect(JSON.parse(res._getData())).toHaveLength(135);
 	});
 });

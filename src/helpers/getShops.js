@@ -1,10 +1,7 @@
 import db from '../../knex/knex';
-// import connectionHandler from '../../knex/connection-handler';
 
 const handleShops = async () => {
 	return db.transaction(async (trx) => {
-		// const shops = await trx('shops').select();
-		// const shops = await connectionHandler()('shops').select();
 		const data = await trx('shops').select('*');
 
 		const shopsWithProjects = Promise.all(
@@ -20,8 +17,6 @@ const handleShops = async () => {
 				};
 			})
 		);
-
-		// db.destroy();
 
 		return shopsWithProjects;
 	});

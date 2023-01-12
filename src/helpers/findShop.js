@@ -1,17 +1,19 @@
 import db from '../../knex/knex';
 
 const findShop = async (name) => {
-	const data = await db('shops').select('*').where({ name: name });
+	return db.transaction(async (trx) => {
+		const data = await trx('shops').select('*').where({ name: name });
 
-	const finalShop = {
-		...data[0],
-		projects: await db('projects')
-			.select('*')
-			.where({ shop_id: data[0].id })
-			.then((data) => data)
-	};
+		const finalShop = {
+			...data[0],
+			projects: await db('projects')
+				.select('*')
+				.where({ shop_id: data[0].id })
+				.then((data) => data)
+		};
 
-	return finalShop;
+		return finalShop;
+	});
 };
 
 export default findShop;

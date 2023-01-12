@@ -1,4 +1,4 @@
-import handleShops from '../../../src/helpers/getShops';
+import handleShops from '../../helpers/getShops';
 import CardList from '../../components/CardList';
 import Dropdown from '../../components/Dropdown';
 import { useState } from 'react';
@@ -19,7 +19,7 @@ export default function Shops({ shops }) {
 					}}
 				/>
 			</div>
-			<CardList data={filteredShops} data_type="Shop" />
+			<CardList data={filteredShops} data_type="shop" />
 		</>
 	);
 }
@@ -28,6 +28,7 @@ export const getStaticProps = async () => {
 	const shops = await handleShops();
 
 	return {
-		props: { shops }
+		props: { shops },
+		revalidate: 600
 	};
 };

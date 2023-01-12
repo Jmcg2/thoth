@@ -11,6 +11,7 @@ exports.up = function (knex) {
 		table.specificType('tags', 'text ARRAY');
 		table.specificType('lang', 'text ARRAY');
 		table.text('short_desc');
+		table.string('project_img');
 	});
 };
 

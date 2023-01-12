@@ -1,22 +1,10 @@
-import handleShops from '../../helpers/getShops';
-import findShop from '../../helpers/findShop';
+import handleShops from '../../../helpers/getProjects';
+import findShop from '../../../helpers/findShop';
 import Image from 'next/image';
-import toast, { Toaster } from 'react-hot-toast';
 import { LinkIcon } from '@heroicons/react/24/solid';
-import ProjectsList from '../../components/ProjectsList';
+import ProjectsList from '../../../components/ProjectsList';
 
 const ShopDetails = ({ shop }) => {
-	// const notify = () => {
-	// 	toast('Contact Copied!', {
-	// 		duration: 1000,
-	// 		position: 'bottom-center',
-	// 		style: {
-	// 			background: '#373A40',
-	// 			color: '#F8F9FA'
-	// 		}
-	// 	});
-	// };
-
 	return (
 		<>
 			<div className="text-center w-11/12 flex py-2 md:flex-row flex-col mx-auto">
@@ -31,17 +19,17 @@ const ShopDetails = ({ shop }) => {
 					/>
 					<h3 className="text-2xl">{shop.location}</h3>
 					<div
-						className="hover:cursor-pointer w-full"
-						onClick={(e) => {
-							// notify();
+						className="hover:cursor-pointer w-full "
+						onClick={() => {
 							window.open(`mailto:${shop.contact}`);
-							// navigator.clipboard.writeText(e.currentTarget.innerText);
 						}}>
-						<h3 className="flex justify-center text-xl">
-							{shop.contact} <LinkIcon className=" w-5 h-5 ml-1 my-auto" />
+						<h3 className="flex justify-center text-xl break-all">
+							{shop.contact}{' '}
+							<span className=" my-auto ml-1 h-full">
+								<LinkIcon className=" w-5 h-5" />
+							</span>
 						</h3>
 					</div>
-					{/* <Toaster /> */}
 				</div>
 				<div className="bg-slate-400 dark:bg-slate-900 md:w-2/3 mt-2 md:mt-0 sm:w-full md:ml-2 rounded-xl p-5">
 					<h3 className="text-left text-lg font-bold pb-2">{`Description:`}</h3>
@@ -56,7 +44,7 @@ const ShopDetails = ({ shop }) => {
 export const getStaticPaths = async () => {
 	const shops = await handleShops();
 
-	const paths = await shops.map((shop) => ({
+	const paths = shops.map((shop) => ({
 		params: { shop: shop.name }
 	}));
 
@@ -67,7 +55,8 @@ export const getStaticProps = async ({ params }) => {
 	const shop = await findShop(params.shop);
 
 	return {
-		props: { shop }
+		props: { shop },
+		revalidate: 600
 	};
 };
 

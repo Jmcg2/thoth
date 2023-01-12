@@ -17,7 +17,7 @@ const ProjectsList = ({ projects }) => {
 						setSearchValue(e.target.value);
 					}}
 				/>
-				<CardList className="p-4" data={filteredProjects} data_type="Project" />
+				<CardList className="p-4" data={filteredProjects} data_type="project" />
 			</div>
 		</div>
 	);

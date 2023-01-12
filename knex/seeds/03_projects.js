@@ -27,7 +27,8 @@ exports.seed = async function (knex) {
 			],
 			lang: ['Javascript', 'React', 'Html', 'Css'],
 			short_desc:
-				'Demeter is a microservice alternative to ACARS. ACARS information is visible to many outside agencies, potentially giving adversaries AMC aircraft positional data. Demeter allows aircraft to disable ACARs in threatened airspaces while continuing to provide secured positional data to mission planners and C2 systems.'
+				'Demeter is a microservice alternative to ACARS. ACARS information is visible to many outside agencies, potentially giving adversaries AMC aircraft positional data. Demeter allows aircraft to disable ACARs in threatened airspaces while continuing to provide secured positional data to mission planners and C2 systems.',
+			project_img: 'demeter'
 		},
 		{
 			shop_id: 1,
@@ -49,7 +50,8 @@ exports.seed = async function (knex) {
 				'Export-Map'
 			],
 			lang: ['Javascript', 'React', 'Html', 'Css', 'Java', 'Spring'],
-			short_desc: 'this is a test short short_desc for Soteria'
+			short_desc: 'this is a test short short_desc for Soteria',
+			project_img: 'soteria'
 		},
 		{
 			shop_id: 1,
@@ -72,7 +74,8 @@ exports.seed = async function (knex) {
 				'Atomic design'
 			],
 			lang: ['Javascript', 'Html', 'Css', 'Ruby', 'Shell', 'React'],
-			short_desc: 'this is a test short short_desc for Glass-House'
+			short_desc: 'this is a test short short_desc for Glass-House',
+			project_img: 'glasshouse'
 		},
 		{
 			shop_id: 1,
@@ -93,7 +96,8 @@ exports.seed = async function (knex) {
 			],
 			lang: ['Swift UI'],
 			short_desc:
-				"Icarus is a mission planning interface for the Electronic Flight Bag (EFB) that CSAR (HH-60G) operators can use in tactical environments where commercial flight planning software is insufficient. It eliminates aircrew's reliance on paper maps by utilizing iOS-compatible mapping software and includes limited tools and capabilities currently available to operators in the Joint Mission Planning System (JMPS)."
+				"Icarus is a mission planning interface for the Electronic Flight Bag (EFB) that CSAR (HH-60G) operators can use in tactical environments where commercial flight planning software is insufficient. It eliminates aircrew's reliance on paper maps by utilizing iOS-compatible mapping software and includes limited tools and capabilities currently available to operators in the Joint Mission Planning System (JMPS).",
+			project_img: 'icarus'
 		},
 		{
 			shop_id: 1,
@@ -112,7 +116,8 @@ exports.seed = async function (knex) {
 				'Track requests'
 			],
 			lang: ['React', 'Javascript', 'Express'],
-			short_desc: 'this is a test short short_desc for Mercury'
+			short_desc: 'this is a test short short_desc for Mercury',
+			project_img: 'mercury'
 		},
 		{
 			shop_id: 1,
@@ -131,7 +136,8 @@ exports.seed = async function (knex) {
 			],
 			lang: ['Javascript'],
 			short_desc:
-				'Tether is a microservice that linked the (MEIS) databases with the Unified Data Library (UDL) for the purposes of transporting AMC aircraft positional data. The MEIS was only visible to AMC mission planners, so Tether provided that data to nine additional COCOMS. Tether allowed mission planners to coordinate sorties and refueling operations with other aircraft platforms aligned to MAJCOMs outside of AMC.'
+				'Tether is a microservice that linked the (MEIS) databases with the Unified Data Library (UDL) for the purposes of transporting AMC aircraft positional data. The MEIS was only visible to AMC mission planners, so Tether provided that data to nine additional COCOMS. Tether allowed mission planners to coordinate sorties and refueling operations with other aircraft platforms aligned to MAJCOMs outside of AMC.',
+			project_img: 'tether'
 		},
 		{
 			shop_id: 1,
@@ -155,7 +161,8 @@ exports.seed = async function (knex) {
 			],
 			lang: ['Kotlin'],
 			short_desc:
-				'Odyssey is a dynamic mission planning interface for the Electronic Knee Board (EKB) that mobility air crews can use in disconnected, austere environments where commercial flight planning software is inoperable. It increases aircrew situational awareness by utilizing ArcGIS mapping technology and limited capabilities currently available to operators through the Joint Mission Planning System (JMPS).'
+				'Odyssey is a dynamic mission planning interface for the Electronic Knee Board (EKB) that mobility air crews can use in disconnected, austere environments where commercial flight planning software is inoperable. It increases aircrew situational awareness by utilizing ArcGIS mapping technology and limited capabilities currently available to operators through the Joint Mission Planning System (JMPS).',
+			project_img: 'odyssey'
 		},
 		{
 			shop_id: 1,
@@ -174,7 +181,8 @@ exports.seed = async function (knex) {
 				'Software-Factory-Library'
 			],
 			lang: ['Javascript', 'React', 'Css', 'Html'],
-			short_desc: 'this is the best project in Conjure history'
+			short_desc: 'this is the best project in Conjure history',
+			project_img: 'thoth'
 		},
 		{
 			shop_id: 4,
@@ -182,7 +190,8 @@ exports.seed = async function (knex) {
 			tags: ['Mobile'],
 			lang: ['Kotlin', 'Spring'],
 			short_desc:
-				'MySquad is an opportunity for leaders to create more effective units Squad organization, counseling and readiness are just a few of the features that MySquad provides.'
+				'MySquad is an opportunity for leaders to create more effective units Squad organization, counseling and readiness are just a few of the features that MySquad provides.',
+			project_img: 'mysquad'
 		},
 		{
 			shop_id: 4,
@@ -190,7 +199,8 @@ exports.seed = async function (knex) {
 			tags: ['Kermit'],
 			lang: ['Damn boi he thicc'],
 			short_desc:
-				'The PMCS application gives Soldiers an opportunity to view entire technical manuals or the PMCS checklist in order to conduct timely and accurate maintenance. The app covers over 600 types of rolling stock equipment with more being added regularly. The ability for operators to view equipment status and faults is currently in progress.'
+				'The PMCS application gives Soldiers an opportunity to view entire technical manuals or the PMCS checklist in order to conduct timely and accurate maintenance. The app covers over 600 types of rolling stock equipment with more being added regularly. The ability for operators to view equipment status and faults is currently in progress.',
+			project_img: 'pmcs'
 		},
 		{
 			shop_id: 4,
@@ -198,7 +208,8 @@ exports.seed = async function (knex) {
 			tags: ['MLP'],
 			lang: ['Doge'],
 			short_desc:
-				'Carrera allows National Guard and Reserve Soldiers to browse and apply to open Active Duty positions from anywhere at any time, removing the need to commute to an armory. Carrera provides a modern and accessible tool that can help fill critical positions around the world.'
+				'Carrera allows National Guard and Reserve Soldiers to browse and apply to open Active Duty positions from anywhere at any time, removing the need to commute to an armory. Carrera provides a modern and accessible tool that can help fill critical positions around the world.',
+			project_img: 'carrera'
 		},
 		{
 			shop_id: 4,
@@ -206,7 +217,8 @@ exports.seed = async function (knex) {
 			tags: ['Big Chungus'],
 			lang: ['Ugandan Knuckles'],
 			short_desc:
-				'Blast Radius gives ammunition handlers the ability to reduce site planning time from an average of 80 hours down to ~40 minutes. Blast Radius meets USATCES standards by calculating safe distances and compatibility in accordance with DoD regulations for above-ground storage of ammunition.'
+				'Blast Radius gives ammunition handlers the ability to reduce site planning time from an average of 80 hours down to ~40 minutes. Blast Radius meets USATCES standards by calculating safe distances and compatibility in accordance with DoD regulations for above-ground storage of ammunition.',
+			project_img: 'blastradius'
 		},
 		{
 			shop_id: 4,
@@ -214,7 +226,8 @@ exports.seed = async function (knex) {
 			tags: ['Pepe'],
 			lang: ['Dat Boi'],
 			short_desc:
-				'eTRIC supports data visualization for resource allocations with a user-friendly tool. Currently being used by organizations dependent on 25ID for land allocation easily overcome land limitations. This can ensure Soldiers have the right training opportunities and promote mission readiness.'
+				'eTRIC supports data visualization for resource allocations with a user-friendly tool. Currently being used by organizations dependent on 25ID for land allocation easily overcome land limitations. This can ensure Soldiers have the right training opportunities and promote mission readiness.',
+			project_img: 'etric'
 		},
 		{
 			shop_id: 4,
@@ -222,7 +235,8 @@ exports.seed = async function (knex) {
 			tags: ['Press F'],
 			lang: ['Harambe'],
 			short_desc:
-				'AirSync is a collaborative mission planning tool for air assault operations per the Gold Book standard. AirSync aims to increase planning efficiency and reduce risk to mission, personnel, and equipment. Future capabilities of AirSync in the works include airborne operations and real-time modification of aircraft manifests.'
+				'AirSync is a collaborative mission planning tool for air assault operations per the Gold Book standard. AirSync aims to increase planning efficiency and reduce risk to mission, personnel, and equipment. Future capabilities of AirSync in the works include airborne operations and real-time modification of aircraft manifests.',
+			project_img: 'airsync'
 		},
 		{
 			shop_id: 4,
@@ -230,7 +244,8 @@ exports.seed = async function (knex) {
 			tags: ['Omae Wa Mou Shindeiru'],
 			lang: ['Belle Delphine'],
 			short_desc:
-				'Marketeer is a data aggregation and research tool for the market research component of the contracting process. This tool can reduce program acquisition lead time (PALT) and aid in FAR compliance.'
+				'Marketeer is a data aggregation and research tool for the market research component of the contracting process. This tool can reduce program acquisition lead time (PALT) and aid in FAR compliance.',
+			project_img: 'marketeer'
 		},
 		{
 			shop_id: 4,
@@ -238,7 +253,8 @@ exports.seed = async function (knex) {
 			tags: ['Grumpy Cat'],
 			lang: ['Nyan Cat'],
 			short_desc:
-				'Avi-X provides tool room management enhancements for units to achieve increased readiness, time and cost savings. Avi-X enables tool room supervisors to spend 50% less time referencing tool locations and statuses within their inventories, resulting in better asset management.'
+				'Avi-X provides tool room management enhancements for units to achieve increased readiness, time and cost savings. Avi-X enables tool room supervisors to spend 50% less time referencing tool locations and statuses within their inventories, resulting in better asset management.',
+			project_img: 'avi-x'
 		},
 		{
 			shop_id: 4,
@@ -246,7 +262,8 @@ exports.seed = async function (knex) {
 			tags: ['GigaChad'],
 			lang: ['First World Problems'],
 			short_desc:
-				'Common Authorized Stockage Listing (CASL) Picker optimizes the pick process at Supply Support Activities (SSA) by sorting the GCSS-Army generated pick tickets. CASL Picker organizes GCSS-Army outputs in accordance with the user’s preferences and generates a new PDF so units can print, quickly action the sorted list, eliminate the manual sort process, and speed-up order fulfillment.'
+				'Common Authorized Stockage Listing (CASL) Picker optimizes the pick process at Supply Support Activities (SSA) by sorting the GCSS-Army generated pick tickets. CASL Picker organizes GCSS-Army outputs in accordance with the user’s preferences and generates a new PDF so units can print, quickly action the sorted list, eliminate the manual sort process, and speed-up order fulfillment.',
+			project_img: 'caslpicker'
 		},
 		{
 			shop_id: 4,
@@ -254,7 +271,8 @@ exports.seed = async function (knex) {
 			tags: ['Stonks'],
 			lang: ['Copypasta'],
 			short_desc:
-				'FireWire is a web-based mobile and desktop application reporting tool that can modernize the indirect fire training experience at the National Training Center (NTC) by enabling data-driven analysis for the fire support community. FireWire enables Observer, Coach, Trainers (OC/Ts) to capture data at the point of creation and every echelon of the fire mission process for data-driven unit coaching and After Action Reviews, resulting in potential increased value for rotational training units and improved readiness.'
+				'FireWire is a web-based mobile and desktop application reporting tool that can modernize the indirect fire training experience at the National Training Center (NTC) by enabling data-driven analysis for the fire support community. FireWire enables Observer, Coach, Trainers (OC/Ts) to capture data at the point of creation and every echelon of the fire mission process for data-driven unit coaching and After Action Reviews, resulting in potential increased value for rotational training units and improved readiness.',
+			project_img: 'firewire'
 		},
 		{
 			shop_id: 4,
@@ -262,7 +280,8 @@ exports.seed = async function (knex) {
 			tags: ['Shrek is love'],
 			lang: ['Ligma'],
 			short_desc:
-				'SRCerer (pronounced Sorcerer) is a product that provides a Path-to-Production (P2P) for Army software development teams that can meet supported cloud native web application design patterns. It is the default P2P used by all ASWF teams and is also used by development teams from the Software Engineering Center (SEC), DEVCOM, and PEO EIS. The SRCerer product offers CI/CD pipelines and an accredited IL4 Kubernetes-based platform that leverages continuous Risk Management Framework (cRMF) through the Army CIO-approved DevSecOps Playbook.'
+				'SRCerer (pronounced Sorcerer) is a product that provides a Path-to-Production (P2P) for Army software development teams that can meet supported cloud native web application design patterns. It is the default P2P used by all ASWF teams and is also used by development teams from the Software Engineering Center (SEC), DEVCOM, and PEO EIS. The SRCerer product offers CI/CD pipelines and an accredited IL4 Kubernetes-based platform that leverages continuous Risk Management Framework (cRMF) through the Army CIO-approved DevSecOps Playbook.',
+			project_img: 'srcerer'
 		},
 		{
 			shop_id: 5,
@@ -276,14 +295,16 @@ exports.seed = async function (knex) {
 			],
 			lang: ['angular', 'typeScript', 'nestjs', 'prisma', 'graphql'],
 			short_desc:
-				'Anonymous Reporting App to allow members to report instances of discrimination to commanders with the ability to get updates on how the instance was handled.'
+				'Anonymous Reporting App to allow members to report instances of discrimination to commanders with the ability to get updates on how the instance was handled.',
+			project_img: 'scorpioncamp'
 		},
 		{
 			shop_id: 5,
 			project_name: 'Waypoint',
 			tags: ['tracking', 'in-progress'],
 			lang: ['angular', 'typeScript', 'nestjs', 'prisma', 'graphql'],
-			short_desc: 'readiness tracking (who tf knows)'
+			short_desc: 'readiness tracking (who tf knows)',
+			project_img: 'scorpioncamp'
 		},
 		{
 			shop_id: 5,
@@ -298,7 +319,8 @@ exports.seed = async function (knex) {
 			],
 			lang: ['c#', 'xamarin forms'],
 			short_desc:
-				'Folder application that contains forms that were digitized for use on EFBs. Pythos currently has 2 forms, PurpleDot and Form49.'
+				'Folder application that contains forms that were digitized for use on EFBs. Pythos currently has 2 forms, PurpleDot and Form49.',
+			project_img: 'pythos'
 		},
 		{
 			shop_id: 5,
@@ -314,7 +336,8 @@ exports.seed = async function (knex) {
 			],
 			lang: ['c#', 'xamarin forms'],
 			short_desc:
-				'Digitized version of AFTO 117 scantron for use on an EFB, started out as a solo application, added to Pythos when Pythos was finished.'
+				'Digitized version of AFTO 117 scantron for use on an EFB, started out as a solo application, added to Pythos when Pythos was finished.',
+			project_img: 'purpledot'
 		},
 		{
 			shop_id: 5,
@@ -322,7 +345,8 @@ exports.seed = async function (knex) {
 			tags: ['form', 'apple', 'efb', 'electronic flight bag', 'awacs'],
 			lang: ['c#', 'xamarin forms'],
 			short_desc:
-				'Digitized version of the paper Form 49, also to be used on an EFB'
+				'Digitized version of the paper Form 49, also to be used on an EFB',
+			project_img: 'form49'
 		}
 	]);
 };
