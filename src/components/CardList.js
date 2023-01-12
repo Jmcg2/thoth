@@ -5,7 +5,9 @@ const CardList = ({ data, data_type }) => {
 		return (
 			<>
 				<div className=" mt-5 w-11/12 mx-auto ">
-					<p className="text-center text-2xl">No Projects to display</p>
+					<p className="text-center text-2xl">{`No ${
+						data_type === 'shop' ? 'Shops' : 'Projects'
+					} to display`}</p>
 				</div>
 			</>
 		);
