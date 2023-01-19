@@ -1,16 +1,16 @@
-import findProject from '../../../helpers/findProject';
-import handleProjects from '../../../helpers/getProjects';
+import findProject from '../../helpers/findProject';
+import handleProjects from '../../helpers/getProjects';
 import Image from 'next/image';
 
 const ProjectDetails = ({ project }) => {
 	return (
-		<>
+		<div className="max-w-7xl mx-auto">
 			<div className="text-center w-11/12 flex py-2 md:flex-row flex-col mx-auto">
 				<div className="bg-slate-400 dark:bg-slate-900 rounded-xl p-4 md:w-1/3 w-full">
 					<h1 className="text-3xl">{project.project_name}</h1>
 					<Image
 						className="mx-auto "
-						src={`/images/${project.img}.png`}
+						src={`/images/${project.project_img}.png`}
 						alt="project logo"
 						width={200}
 						height={200}
@@ -34,8 +34,16 @@ const ProjectDetails = ({ project }) => {
 					<p className="text-left">{project.short_desc}</p>
 				</div>
 			</div>
-			<div className="card"></div>
-		</>
+			<div className="card p-10 flex flex-row flex-wrap">
+				{project.tags.map((tag, index) => (
+					<p
+						className="text-center bg-blue-400 rounded-xl mx-1 my-2 px-3"
+						key={index}>
+						{tag}
+					</p>
+				))}
+			</div>
+		</div>
 	);
 };
 

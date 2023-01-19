@@ -1,16 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
 const Card = ({ data, index, data_type }) => {
-	const router = useRouter();
-
 	return (
 		<Link
 			href={
 				data_type === 'shop'
 					? `/shops/${data.name}`
-					: `${router.asPath}/${data.project_name}`
+					: `/projects/${data.project_name}`
 			}
 			className="relative p-2 rounded-lg  bg-slate-600 dark:bg-slate-800 hover:bg-slate-700 group max-w-md w-full mx-auto"
 			key={index}>

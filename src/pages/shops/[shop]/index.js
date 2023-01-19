@@ -5,6 +5,7 @@ import { LinkIcon } from '@heroicons/react/24/solid';
 import ProjectsList from '../../../components/ProjectsList';
 
 const ShopDetails = ({ shop }) => {
+	console.log(shop);
 	return (
 		<>
 			<div className="text-center w-11/12 flex py-2 md:flex-row flex-col mx-auto">
@@ -36,7 +37,7 @@ const ShopDetails = ({ shop }) => {
 					<p className="text-left">{shop.description}</p>
 				</div>
 			</div>
-			<ProjectsList projects={shop.projects} />
+			<ProjectsList projects={shop?.projects} />
 		</>
 	);
 };
