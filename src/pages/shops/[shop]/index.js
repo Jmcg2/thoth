@@ -1,11 +1,10 @@
-import handleShops from '../../../helpers/getProjects';
+import handleShops from '../../../helpers/getShops';
 import findShop from '../../../helpers/findShop';
 import Image from 'next/image';
 import { LinkIcon } from '@heroicons/react/24/solid';
 import ProjectsList from '../../../components/ProjectsList';
 
 const ShopDetails = ({ shop }) => {
-	console.log(shop);
 	return (
 		<>
 			<div className="text-center w-11/12 flex py-2 md:flex-row flex-col mx-auto">
@@ -24,8 +23,8 @@ const ShopDetails = ({ shop }) => {
 						onClick={() => {
 							window.open(`mailto:${shop.contact}`);
 						}}>
-						<h3 className="flex justify-center text-xl break-all">
-							{shop.contact}{' '}
+						<h3 className="flex justify-center text-xl break-all hover:underline">
+							{shop.contact}
 							<span className=" my-auto ml-1 h-full">
 								<LinkIcon className=" w-5 h-5" />
 							</span>
@@ -37,7 +36,7 @@ const ShopDetails = ({ shop }) => {
 					<p className="text-left">{shop.description}</p>
 				</div>
 			</div>
-			<ProjectsList projects={shop?.projects} />
+			<ProjectsList projects={shop.projects} />
 		</>
 	);
 };

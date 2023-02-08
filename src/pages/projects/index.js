@@ -3,11 +3,14 @@ import Dropdown from '../../components/Dropdown';
 import handleProjects from '../../helpers/getProjects';
 import { useState } from 'react';
 import search from '../../helpers/search';
+import getAutoTerms from '../../helpers/getAutoTerms';
 
 const ProjectDetail = ({ projects }) => {
 	const [searchValue, setSearchValue] = useState('');
 
 	const filteredProjects = search(projects, searchValue);
+
+	let uniqueTerms = getAutoTerms(projects);
 
 	return (
 		<>
@@ -17,6 +20,7 @@ const ProjectDetail = ({ projects }) => {
 					onChange={(e) => {
 						setSearchValue(e.target.value);
 					}}
+					termData={uniqueTerms}
 				/>
 			</div>
 			<CardList data={filteredProjects} data_type="project" />

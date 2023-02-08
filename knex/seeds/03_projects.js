@@ -242,7 +242,7 @@ exports.seed = async function (knex) {
 			shop_id: 4,
 			project_name: 'Marketeer',
 			tags: ['Omae Wa Mou Shindeiru'],
-			lang: ['Belle Delphine'],
+			lang: ['Filler'],
 			short_desc:
 				'Marketeer is a data aggregation and research tool for the market research component of the contracting process. This tool can reduce program acquisition lead time (PALT) and aid in FAR compliance.',
 			project_img: 'marketeer'

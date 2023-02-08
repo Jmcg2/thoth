@@ -1,14 +1,4 @@
-import useSWRImmutable from 'swr';
-
-const Dropdown = ({ onChange }) => {
-	const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-	const { data } = useSWRImmutable('/api/get_auto_terms', fetcher, {
-		revalidateIfStale: false,
-		revalidateOnFocus: false,
-		revalidateOnReconnect: false
-	});
-
+const Dropdown = ({ onChange, termData }) => {
 	return (
 		<div className="flex justify-center">
 			<input
@@ -19,7 +9,7 @@ const Dropdown = ({ onChange }) => {
 				onChange={onChange}
 			/>
 			<datalist id="autocomplete-data">
-				{data?.map((term, index) => (
+				{termData?.map((term, index) => (
 					<option key={index} value={term} />
 				))}
 			</datalist>
