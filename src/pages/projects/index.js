@@ -12,6 +12,8 @@ const ProjectDetail = ({ projects }) => {
 
 	let uniqueTerms = getAutoTerms(projects);
 
+	console.log(uniqueTerms);
+
 	return (
 		<>
 			<div className="mt-5 w-11/12 mx-auto">

@@ -21,7 +21,7 @@ const Header = () => {
 					<h1
 						className="text-white text-4xl hover:cursor-pointer"
 						onClick={() => router.push('/shops')}>
-						SORFTWAIR SHOOPS
+						THOTH
 					</h1>
 					<ThemeButton />
 				</div>

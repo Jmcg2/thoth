@@ -196,8 +196,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'PMCS',
-			tags: ['Kermit'],
-			lang: ['Damn boi he thicc'],
+			tags: ['Needs Data'],
+			lang: ['Needs Data'],
 			short_desc:
 				'The PMCS application gives Soldiers an opportunity to view entire technical manuals or the PMCS checklist in order to conduct timely and accurate maintenance. The app covers over 600 types of rolling stock equipment with more being added regularly. The ability for operators to view equipment status and faults is currently in progress.',
 			project_img: 'pmcs'
@@ -205,8 +205,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'Carrera',
-			tags: ['MLP'],
-			lang: ['Doge'],
+			tags: ['Needs Data'],
+			lang: ['Needs Data'],
 			short_desc:
 				'Carrera allows National Guard and Reserve Soldiers to browse and apply to open Active Duty positions from anywhere at any time, removing the need to commute to an armory. Carrera provides a modern and accessible tool that can help fill critical positions around the world.',
 			project_img: 'carrera'
@@ -214,8 +214,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'Blast Radius',
-			tags: ['Big Chungus'],
-			lang: ['Ugandan Knuckles'],
+			tags: ['Needs Data'],
+			lang: ['Needs Data'],
 			short_desc:
 				'Blast Radius gives ammunition handlers the ability to reduce site planning time from an average of 80 hours down to ~40 minutes. Blast Radius meets USATCES standards by calculating safe distances and compatibility in accordance with DoD regulations for above-ground storage of ammunition.',
 			project_img: 'blastradius'
@@ -223,8 +223,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'eTRIC',
-			tags: ['Pepe'],
-			lang: ['Dat Boi'],
+			tags: ['Needs Data'],
+			lang: ['Needs Data'],
 			short_desc:
 				'eTRIC supports data visualization for resource allocations with a user-friendly tool. Currently being used by organizations dependent on 25ID for land allocation easily overcome land limitations. This can ensure Soldiers have the right training opportunities and promote mission readiness.',
 			project_img: 'etric'
@@ -232,8 +232,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'AirSync',
-			tags: ['Press F'],
-			lang: ['Harambe'],
+			tags: ['Needs Data'],
+			lang: ['Needs Data'],
 			short_desc:
 				'AirSync is a collaborative mission planning tool for air assault operations per the Gold Book standard. AirSync aims to increase planning efficiency and reduce risk to mission, personnel, and equipment. Future capabilities of AirSync in the works include airborne operations and real-time modification of aircraft manifests.',
 			project_img: 'airsync'
@@ -241,8 +241,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'Marketeer',
-			tags: ['Omae Wa Mou Shindeiru'],
-			lang: ['Filler'],
+			tags: ['Needs Data'],
+			lang: ['Needs Data'],
 			short_desc:
 				'Marketeer is a data aggregation and research tool for the market research component of the contracting process. This tool can reduce program acquisition lead time (PALT) and aid in FAR compliance.',
 			project_img: 'marketeer'
@@ -250,8 +250,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'Avi-X',
-			tags: ['Grumpy Cat'],
-			lang: ['Nyan Cat'],
+			tags: ['Needs Data'],
+			lang: ['Needs Data'],
 			short_desc:
 				'Avi-X provides tool room management enhancements for units to achieve increased readiness, time and cost savings. Avi-X enables tool room supervisors to spend 50% less time referencing tool locations and statuses within their inventories, resulting in better asset management.',
 			project_img: 'avi-x'
@@ -259,8 +259,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'CASL Picker',
-			tags: ['GigaChad'],
-			lang: ['First World Problems'],
+			tags: ['Needs Data'],
+			lang: ['Needs Data'],
 			short_desc:
 				'Common Authorized Stockage Listing (CASL) Picker optimizes the pick process at Supply Support Activities (SSA) by sorting the GCSS-Army generated pick tickets. CASL Picker organizes GCSS-Army outputs in accordance with the user’s preferences and generates a new PDF so units can print, quickly action the sorted list, eliminate the manual sort process, and speed-up order fulfillment.',
 			project_img: 'caslpicker'
@@ -268,8 +268,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'FireWire',
-			tags: ['Stonks'],
-			lang: ['Copypasta'],
+			tags: ['Needs Data'],
+			lang: ['Needs Data'],
 			short_desc:
 				'FireWire is a web-based mobile and desktop application reporting tool that can modernize the indirect fire training experience at the National Training Center (NTC) by enabling data-driven analysis for the fire support community. FireWire enables Observer, Coach, Trainers (OC/Ts) to capture data at the point of creation and every echelon of the fire mission process for data-driven unit coaching and After Action Reviews, resulting in potential increased value for rotational training units and improved readiness.',
 			project_img: 'firewire'
@@ -277,8 +277,8 @@ exports.seed = async function (knex) {
 		{
 			shop_id: 4,
 			project_name: 'SRCerer',
-			tags: ['Shrek is love'],
-			lang: ['Ligma'],
+			tags: ['P2P'],
+			lang: ['Needs Data'],
 			short_desc:
 				'SRCerer (pronounced Sorcerer) is a product that provides a Path-to-Production (P2P) for Army software development teams that can meet supported cloud native web application design patterns. It is the default P2P used by all ASWF teams and is also used by development teams from the Software Engineering Center (SEC), DEVCOM, and PEO EIS. The SRCerer product offers CI/CD pipelines and an accredited IL4 Kubernetes-based platform that leverages continuous Risk Management Framework (cRMF) through the Army CIO-approved DevSecOps Playbook.',
 			project_img: 'srcerer'
@@ -347,6 +347,31 @@ exports.seed = async function (knex) {
 			short_desc:
 				'Digitized version of the paper Form 49, also to be used on an EFB',
 			project_img: 'form49'
+		},
+		{
+			shop_id: 6,
+			project_name: 'Hyper Thought',
+			tags: ['cms', 'content management system', 'context', 'data', 'research'],
+			lang: ['c#', 'xamarin forms'],
+			short_desc:
+				'HyperThought is a collaborative content management system, designed to make data FAIR (Findable, Accessible, Interoperable, and Reusable). It does this by adding context to the data uploaded by users through Key-Value pairs and process models. This gives users the benefit of not only finding their data when searching for it, but also the story behind it. This greater context can lead to discoveries otherwise left unnoticed by leveraging existing knowledge from the research community.',
+			project_img: 'hyperthought'
+		},
+		{
+			shop_id: 6,
+			project_name: 'Avolve',
+			tags: [
+				'content sharing platform',
+				'video',
+				'documents',
+				'learning',
+				'training',
+				'education'
+			],
+			lang: ['javascript'],
+			short_desc:
+				'Avolve is a content sharing platform for all Air, Space, and military professionals to explore and view videos, documents, websites, and Learning Paths for their training, education and self-improvement. Content can be contributed by anyone who wishes to share their expertise or interests with other Air, Space, or military professionals, all behind a secure CAC authenticated firewall. Individuals and organizations, enlisted, officers and civilians, are all able to share their knowledge and messages across services, commands, career paths, and geography.',
+			project_img: 'avolve'
 		}
 	]);
 };

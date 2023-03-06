@@ -10,7 +10,7 @@ export default function Home() {
 				onClick={() => {
 					router.push('/shops');
 				}}>
-				Shoops
+				Shops
 			</button>
 		</>
 	);
