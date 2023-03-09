@@ -49,6 +49,15 @@ exports.seed = async function (knex) {
 			contact: '552ACNS.DOUP.ScorpionCAMP@us.af.mil',
 			branch_id: 1,
 			img: 'scorpioncamp'
+		},
+		{
+			name: 'Hangar 18',
+			description:
+				'The Hangar 18 mission is to deliver Agile and DevSecOps to the WPAFB Digital Acquisition and Engineering community. We accomplish this in three distinct ways: Deploying tools and tool pipelines, guiding technical efforts and educating the workforce',
+			location: 'Wright-Pattterson AFB, Ohio',
+			contact: 'hangar18@afresearchlab.com',
+			branch_id: 1,
+			img: 'hangar18'
 		}
 	]);
 };

@@ -14,6 +14,7 @@ const Header = () => {
   const [active, setActive] = useState(false);
   const [results, setResults] = useState([]);
 
+<<<<<<< HEAD
   return (
     <>
       <div className="flex justify-around h-20 w-full top-0 sticky z-10 bg-slate-600 dark:bg-slate-800">
@@ -29,6 +30,22 @@ const Header = () => {
       </div>
     </>
   );
+=======
+	return (
+		<>
+			<div className="flex justify-around h-20 w-full top-0 sticky z-10 bg-slate-600 dark:bg-slate-800">
+				<div className="flex justify-between my-auto w-11/12">
+					<h1
+						className="text-white text-4xl hover:cursor-pointer"
+						onClick={() => router.push('/shops')}>
+						THOTH
+					</h1>
+					<ThemeButton />
+				</div>
+			</div>
+		</>
+	);
+>>>>>>> main
 };
 
 export default Header;
