@@ -1,39 +1,40 @@
-import ThemeButton from './ThemeButton';
-import { useRouter } from 'next/router';
-import { ArrowLeftIcon } from '@heroicons/react/24/outline';
-import { useCallback, useRef, useState } from 'react';
-import Dropdown from './Dropdown';
+import ThemeButton from "./ThemeButton";
+import { useRouter } from "next/router";
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { useCallback, useRef, useState } from "react";
+import Dropdown from "./Dropdown";
 
 const Header = () => {
-	const router = useRouter();
-	const path = router.pathname;
+  const router = useRouter();
+  const path = router.pathname;
 
-	const [searchValue, setSearchValue] = useState('');
-	const searchRef = useRef(null);
-	const [query, setQuery] = useState('');
-	const [active, setActive] = useState(false);
-	const [results, setResults] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  const searchRef = useRef(null);
+  const [query, setQuery] = useState("");
+  const [active, setActive] = useState(false);
+  const [results, setResults] = useState([]);
 
-	return (
-		<>
-			<div className="flex justify-around h-20 w-full top-0 sticky z-10 bg-slate-600 dark:bg-slate-800">
-				<div className="flex justify-between my-auto w-11/12">
-					<h1
-						className="text-white text-4xl hover:cursor-pointer"
-						onClick={() => router.push('/shops')}>
-						SORFTWAIR SHOOPS
-					</h1>
-					<ThemeButton />
-				</div>
-			</div>
-		</>
-	);
+  return (
+    <>
+      <div className="flex justify-around h-20 w-full top-0 sticky z-10 bg-slate-600 dark:bg-slate-800">
+        <div className="flex justify-between my-auto w-11/12">
+          <h1
+            className="text-white text-4xl hover:cursor-pointer"
+            onClick={() => router.push("/shops")}
+          >
+            Department of Defense Software Factories
+          </h1>
+          <ThemeButton />
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Header;
 
 {
-	/* <div className="flex flex-nowrap flex-col h-40 w-full   mx-auto top-0 sticky z-10 bg-slate-600 dark:bg-slate-800">
+  /* <div className="flex flex-nowrap flex-col h-40 w-full   mx-auto top-0 sticky z-10 bg-slate-600 dark:bg-slate-800">
 				<h1
 					className="text-white text-5xl mx-auto mt-4 hover:cursor-pointer w-auto"
 					onClick={() => router.push('/shops')}>
