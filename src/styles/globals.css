@@ -24,9 +24,107 @@
   }
 
 .btn {
-	@apply bg-slate-700 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded h-10;
+	@apply bg-slate-700 hover:bg-conjure2 text-white font-bold py-2 px-4 rounded h-10;
 }
 
 .card {
 	@apply bg-slate-400 dark:bg-slate-900 w-11/12 mx-auto rounded-xl;
 }
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+}
+.embla__slide {
+  display: flex;
+  flex: 0 0 100%;
+  min-width: 0;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#outer-div {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin: 40px;
+  }
+  
+  #inner-div {
+	
+	margin: 0 auto;
+	padding: 3px;
+  }
+
+.modalTop{
+	background: #24316c no-repeat 1em center;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.25em;
+    height: 45px;
+    line-height: 45px;
+    letter-spacing: 0.1rem;
+    padding-left: 57px;
+	display: block;
+}
+
+.modalWrapper {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+	background-color: #e5e7eb;
+}
+
+.modal {
+    background-color: #ffffff;
+    margin: 100px auto 0 auto;
+    width: 42rem;
+	height: auto;
+}
+
+.modalBody {
+    color: #251833;
+    padding: 38px 21px;
+	display: block;
+	height: auto;
+}
+
+.button-small {	
+    font-size: 0.875rem;
+    font-weight: 400;
+    height: 3.4rem;
+    width: 11rem;
+	background-color: rgb(36, 49, 108);
+	min-width: 80px;
+	border-radius: 10px;
+	user-select: none;
+    border: none;
+    border-style: solid;
+    border-width: 1px;
+	margin-bottom: 8px;
+	cursor: pointer;
+	
+}
+
+.button-small:hover {
+	color: white;
+}
+
+
+.lightbox{
+	display: block;
+	font-family: "Montserrat", sans-serif;
+	height: 100vh;
+}
+ 
+li {
+    font-size: 14px;
+    margin-left: 10px;
+    list-style-type: circle;
+ }

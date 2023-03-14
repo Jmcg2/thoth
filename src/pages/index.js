@@ -1,33 +1,21 @@
-import { useRouter } from "next/router";
+import { ConjureCarousel } from "../components/Carousel";
+import Landing from "../components/Landing";
+import { useEffect, useState } from "react";
+
 export default function Home() {
-<<<<<<< HEAD
-  const router = useRouter();
-  return (
-    <>
-      <h1>HOMEPAGE</h1>
-      <button
-        className="btn"
-        onClick={() => {
-          router.push("/shops");
-        }}
-      >
-        Shoops
-      </button>
-    </>
-  );
-=======
-	const router = useRouter();
-	return (
-		<>
-			<h1>HOMEPAGE</h1>
-			<button
-				className="btn"
-				onClick={() => {
-					router.push('/shops');
-				}}>
-				Shops
-			</button>
-		</>
-	);
->>>>>>> main
+  const [toggleAgree, setToggleAgree] = useState(false);
+
+  if (toggleAgree === false) {
+    return (
+      <>
+        <Landing inputValue={toggleAgree} setInputValue={setToggleAgree} />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <ConjureCarousel />
+      </>
+    );
+  }
 }

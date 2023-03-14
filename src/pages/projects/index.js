@@ -5,17 +5,18 @@ import { useState } from "react";
 import search from "../../helpers/search";
 import getAutoTerms from "../../helpers/getAutoTerms";
 
-// const ProjectDetail = ({ projects }) => {
-//   const [searchValue, setSearchValue] = useState("");
+const ProjectDetail = ({ projects }) => {
+  const [searchValue, setSearchValue] = useState("");
 
-//   const filteredProjects = search(projects, searchValue);
+  const filteredProjects = search(projects, searchValue);
 
-//   let uniqueTerms = getAutoTerms(projects);
-//   return (
-//project cards
-// <>
-{
-  /* <div className="mt-5 w-11/12 mx-auto">
+  let uniqueTerms = getAutoTerms(projects);
+
+  console.log(uniqueTerms);
+
+  return (
+    <>
+      <div className="mt-5 w-11/12 mx-auto">
         <Dropdown
           className="mx-auto"
           onChange={(e) => {
@@ -23,44 +24,19 @@ import getAutoTerms from "../../helpers/getAutoTerms";
           }}
           termData={uniqueTerms}
         />
-      </div> */
-}
-{
-  /* <CardList data={filteredProjects} data_type="project" /> */
-}
-{
-  /* </>
+      </div>
+      <CardList data={filteredProjects} data_type="project" />
+    </>
   );
-}; */
-}
-
-<<<<<<< HEAD
-// export const getStaticProps = async () => {
-//   const projects = await handleProjects();
-=======
-	console.log(uniqueTerms);
-
-	return (
-		<>
-			<div className="mt-5 w-11/12 mx-auto">
-				<Dropdown
-					className="mx-auto"
-					onChange={(e) => {
-						setSearchValue(e.target.value);
-					}}
-					termData={uniqueTerms}
-				/>
-			</div>
-			<CardList data={filteredProjects} data_type="project" />
-		</>
-	);
 };
->>>>>>> main
 
-//   return {
-//     props: { projects },
-//     revalidate: 600,
-//   };
-// };
+export const getStaticProps = async () => {
+  const projects = await handleProjects();
+
+  return {
+    props: { projects },
+    revalidate: 600,
+  };
+};
 
 export default ProjectDetail;
