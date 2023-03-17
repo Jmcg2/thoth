@@ -12,7 +12,7 @@ const ProjectDetail = ({ projects }) => {
 
   let uniqueTerms = getAutoTerms(projects);
 
-  console.log(uniqueTerms);
+  // console.log(uniqueTerms);
 
   return (
     <>

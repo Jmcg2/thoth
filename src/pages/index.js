@@ -1,6 +1,6 @@
 import { ConjureCarousel } from "../components/Carousel";
 import Landing from "../components/Landing";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [toggleAgree, setToggleAgree] = useState(false);

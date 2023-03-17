@@ -11,7 +11,7 @@ export default function Layout({ children }) {
         <title>DoD Software Factories</title>
       </Head>
       <HeaderMemo />
-      <main>{children}</main>
+      <main className="main">{children}</main>
       <Footer />
     </>
   );
