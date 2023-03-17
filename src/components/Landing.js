@@ -59,7 +59,7 @@ const Landing = (props) => {
               <div className="modalFooter">
                 <button
                   className="button-small"
-                  onClick={() => props.setInputValue(true)}
+                  onClick={() => props.setInputValue(false)}
                 >
                   I Agree
                 </button>

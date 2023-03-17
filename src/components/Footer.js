@@ -10,7 +10,10 @@ import Contact from "./Contact";
 function Footer() {
   return (
     <>
-      <div className="bg-slate-400 dark:bg-slate-900 h-auto w-full flex md:flex-row flex-col justify-around items-center">
+      <div
+        style={{ minHeight: "23.5vh" }}
+        className="bg-slate-400 dark:bg-slate-900 h-auto w-full flex md:flex-row flex-col justify-around items-center"
+      >
         <div className="p-5">
           <ul>
             <Link href="/">
@@ -57,19 +60,21 @@ function Footer() {
           <ul>
             <p className="text-conjure font-bold text-2xl pb-4">Tags</p>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
-              HTML
+              <Link href={"/search?tag=HTML"}>HTML</Link>
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
-              Java
+              <Link href={"/search?tag=JAVA"}>Java</Link>
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
-              C#
+              <Link href={"/search?tag=UDL+%28unified+data+library%29"}>
+                UDL (Unified Data Library)
+              </Link>
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
-              C++
+              <Link href={"/search?tag=Android"}>Android</Link>
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
-              Javascript
+              <Link href={"/search?tag=Javascript"}>Javascript</Link>
             </li>
           </ul>
         </div>

@@ -1,14 +1,15 @@
 import { ConjureCarousel } from "../components/Carousel";
 import Landing from "../components/Landing";
-import { useState } from "react";
+import { useContext } from "react";
+import { BannerContext } from "../pages/_app";
 
 export default function Home() {
-  const [toggleAgree, setToggleAgree] = useState(false);
+  const { bannerToggle, setBannerToggle } = useContext(BannerContext);
 
-  if (toggleAgree === false) {
+  if (bannerToggle === true) {
     return (
       <>
-        <Landing inputValue={toggleAgree} setInputValue={setToggleAgree} />
+        <Landing setInputValue={setBannerToggle} />
       </>
     );
   } else {

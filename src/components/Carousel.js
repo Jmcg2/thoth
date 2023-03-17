@@ -28,6 +28,42 @@ export const ConjureCarousel = () => {
         <div className="embla__slide">
           {" "}
           <Image
+            src={"/images/conjure7.jpeg"}
+            width={800}
+            height={500}
+            sizes="100vw"
+            alt="conjure1"
+          ></Image>
+          <div id="outer-div">
+            <div id="inner-div">
+              SCOTT AIR FORCE BASE, Ill. – Across the Air Force Airmen banded
+              together to evacuate approximately 120,000 American citizens and
+              Afghan evacuees during Operation Allies Refuge from the Hamid
+              Karzai International Airport, Afghanistan. The operation itself,
+              to date, is the largest noncombatant evacuation operation of its
+              kind in Air Force history. When one thinks of an evacuation, the
+              envisioning in their mind may be of security forces personnel
+              ensuring safety and aircraft being expertly flown, but those are
+              only a couple color pallets in the artfully crafted total picture.
+              Enter the professionals of the 375th Communications Support
+              Squadron Tether team. “The Tether Team is a team of developers
+              within the Conjure Software Factory who were tasked to develop an
+              application called Tether,” said Tech. Sgt. Lavelle Burgess, 375th
+              Communications Support Squadron product manager. ”The purpose of
+              Tether is to automate the collection of Air Mobility Command
+              aircraft positional data and provide it to the Unified Data
+              Library (UDL). The reason this is important is that other
+              Combatant Commands use the UDL for command and control purposes
+              and for mission planning, but could not view MAF aircraft in the
+              UDL. Being able to see AMC aircraft in their systems can influence
+              Combatant Command mission planners because they know what
+              resources are available in a particular area.”
+            </div>
+          </div>
+        </div>
+        <div className="embla__slide">
+          {" "}
+          <Image
             src={"/images/conjure2.webp"}
             width={800}
             height={500}
