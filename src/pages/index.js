@@ -1,10 +1,15 @@
 import { ConjureCarousel } from "../components/Carousel";
 import Landing from "../components/Landing";
-import { useContext } from "react";
-import { BannerContext } from "../pages/_app";
+import { useState, useLayoutEffect } from "react";
 
 export default function Home() {
-  const { bannerToggle, setBannerToggle } = useContext(BannerContext);
+  const [bannerToggle, setBannerToggle] = useState(true);
+
+  useLayoutEffect(() => {
+    sessionStorage.getItem("state") === null
+      ? sessionStorage.setItem("state", true)
+      : setBannerToggle(false);
+  }, []);
 
   if (bannerToggle === true) {
     return (

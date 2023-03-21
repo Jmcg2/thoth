@@ -25,10 +25,22 @@ function Footer() {
               ></Image>
             </Link>
             <div className="flex gap-6 pb-5 pt-2">
-              <FaInstagram className="text-2xl cursor-pointer hover:text-yellow-600" />
-              <FaTwitter className="text-2xl cursor-pointer hover:text-blue-600" />
-              <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
-              <FaYoutube className="text-2xl cursor-pointer hover:text-red-600" />
+              <Link href={"https://www.instagram.com/usairforce/?hl=en"}>
+                <FaInstagram className="text-2xl cursor-pointer hover:text-yellow-600" />
+              </Link>
+              <Link href={"https://twitter.com/usairforce"}>
+                <FaTwitter className="text-2xl cursor-pointer hover:text-blue-600" />
+              </Link>
+              <Link
+                href={
+                  "https://www.linkedin.com/company/united-states-air-force"
+                }
+              >
+                <FaLinkedin className="text-2xl cursor-pointer hover:text-blue-600" />
+              </Link>
+              <Link href={"https://www.youtube.com/user/AFBlueTube"}>
+                <FaYoutube className="text-2xl cursor-pointer hover:text-red-600" />
+              </Link>
             </div>
           </ul>
         </div>
