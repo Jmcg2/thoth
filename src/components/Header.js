@@ -1,5 +1,6 @@
 import ThemeButton from "./ThemeButton";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useCallback, useRef, useState } from "react";
 import Dropdown from "./Dropdown";
@@ -23,6 +24,7 @@ const Header = () => {
             onClick={() => router.push("/")}
           >
             THOTH
+            {/* <Image src={"/images/s28.webp"} width={60} height={100}></Image> */}
           </h1>
         </div>
         <div className="flex justify-end my-auto w-11/12 p-4 gap-4">

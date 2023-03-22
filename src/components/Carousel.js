@@ -24,7 +24,7 @@ export const ConjureCarousel = () => {
 
   return (
     <div className="embla" ref={emblaRef}>
-      <div className="embla__container" display={"flex"}>
+      <div className="embla__container">
         <div className="embla__slide">
           {" "}
           <Image
@@ -33,6 +33,7 @@ export const ConjureCarousel = () => {
             height={500}
             sizes="100vw"
             alt="conjure1"
+            style={{ objectFit: "contain" }}
           ></Image>
           <div id="outer-div">
             <div id="inner-div">
@@ -49,15 +50,7 @@ export const ConjureCarousel = () => {
               Squadron Tether team. “The Tether Team is a team of developers
               within the Conjure Software Factory who were tasked to develop an
               application called Tether,” said Tech. Sgt. Lavelle Burgess, 375th
-              Communications Support Squadron product manager. ”The purpose of
-              Tether is to automate the collection of Air Mobility Command
-              aircraft positional data and provide it to the Unified Data
-              Library (UDL). The reason this is important is that other
-              Combatant Commands use the UDL for command and control purposes
-              and for mission planning, but could not view MAF aircraft in the
-              UDL. Being able to see AMC aircraft in their systems can influence
-              Combatant Command mission planners because they know what
-              resources are available in a particular area.”
+              Communications Support Squadron product manager.
             </div>
           </div>
         </div>
@@ -69,6 +62,7 @@ export const ConjureCarousel = () => {
             height={500}
             sizes="100vw"
             alt="conjure1"
+            style={{ objectFit: "contain" }}
           ></Image>
           <div id="outer-div">
             <div id="inner-div">
@@ -90,6 +84,7 @@ export const ConjureCarousel = () => {
             height={500}
             sizes="100vw"
             alt="conjure2"
+            style={{ objectFit: "contain" }}
           ></Image>
           <div id="outer-div">
             <div id="inner-div">
@@ -115,6 +110,7 @@ export const ConjureCarousel = () => {
             height={500}
             sizes="100vw"
             alt="conjure4"
+            style={{ objectFit: "contain" }}
           ></Image>
           <div id="outer-div">
             <div id="inner-div">
