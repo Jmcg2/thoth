@@ -1,14 +1,3 @@
-<!-- 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-## Deploy on Vercel
-
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) -->
-
 This project was developed by Daniel Salazar, Michael Borland, and Mark Scarna for Conjure SWF.
 
 # Getting Started
@@ -33,19 +22,19 @@ docker pull postgres
 
 - Create the directory for the persistent PostgreSQL data
     ```
-        mkdir -p $HOME/docker/volumes/postgres
+    mkdir -p $HOME/docker/volumes/postgres
     ```
 - Start the container
     ```
-        docker run --name postgres -e POSTGRES_PASSWORD=thoth -e POSTGRES_DB=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
+    docker run --name postgres -e POSTGRES_PASSWORD=thoth -e POSTGRES_DB=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
     ```
 - Verify Thoth database creation
     ```
-        docker exec -it postgres /bin/bash
+    docker exec -it postgres /bin/bash
 
-        psql -U postgres
+    psql -U postgres
 
-        \list
+    \list
     ``` 
     You should see thoth present in the list of databases.
 
@@ -53,22 +42,22 @@ docker pull postgres
 
 - Create tables in Thoth database 
     ```
-        npx knex migrate:latest
+    npx knex migrate:latest
     ```
 - Seed data into tables
     ```
-        npx knex seed:run
+    npx knex seed:run
     ```
 
 ## Starting the Dev Server
 
 - If using Yarn 
     ```
-        yarn dev
+    yarn dev
     ```
 - If using npm
     ```
-        npm start dev
+    npm start dev
     ```
 
 # Adding data to database
@@ -92,12 +81,12 @@ npx knex seed:run
 ### Example Shop data format
 ```
 {
-			name: 'ShopName',
-			description: 'ShopDescription',
-			location: 'ShopLocation',
-			contact: 'ShopEmail',
-			branch_id: 1,
-			img: 'ShopImg'
+	name: 'ShopName',
+	description: 'ShopDescription',
+	location: 'ShopLocation',
+	contact: 'ShopEmail',
+	branch_id: 1,
+	img: 'ShopImg'
 }
 ```
 NOTE: For branch_id ---> 1 = Air Force, 2 = Navy, 3 = Army, 4 = Space Force, 5 = Marines.
@@ -112,17 +101,17 @@ NOTE: For img ---> `ShopImg` needs to match name of png in the `./public/images`
 ### Example Project data format
 ```
 {
-			shop_id: 1,
-			project_name: 'ProjectName',
-			tags: [
-				'ProjectTags1',
-                'ProjectTags2',
-                'ProjectTags3'
-			],
-			lang: ['ProjectLanguages', 'ProjectLanguages2'],
-			short_desc:
-				"ProjectDescription",
-			project_img: 'ProjectImg'
+	shop_id: 1,
+	project_name: 'ProjectName',
+	tags: [
+		'ProjectTags1',
+        'ProjectTags2',
+        'ProjectTags3'
+		],
+	lang: ['ProjectLanguages', 'ProjectLanguages2'],
+	short_desc:
+		"ProjectDescription",
+	project_img: 'ProjectImg'
 }
 ```
 NOTE: For shop_id ---> The position in the shop array is the shop id.
