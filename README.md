@@ -1,34 +1,121 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project was developed by Daniel Salazar, Michael Borland, and Mark Scarna for Conjure SWF.
 
-## Getting Started
+# Getting Started
 
-First, run the development server:
+Download and Install [Knex](https://github.com/knex/documentation) using your prefered package manager. 
 
-```bash
-npm run dev
-# or
-yarn dev
+[Nodejs](https://nodejs.org/en) is our personal choice with npm and yarn
+```
+npm install --global yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure your [Docker](https://www.docker.com/products/docker-desktop/) is installed and up-to-date. 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Download the official docker image for [PostgreSQL](https://hub.docker.com/_/postgres)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
+docker pull postgres
+```
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Create `Thoth` database in 
 
-## Learn More
+- Create the directory for the persistent PostgreSQL data
+    ```
+    mkdir -p $HOME/docker/volumes/postgres
+    ```
+- Start the container
+    ```
+    docker run --name postgres -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=thoth -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
+    ```
+- Verify Thoth database creation
+    ```
+    docker exec -it postgres /bin/bash
 
-To learn more about Next.js, take a look at the following resources:
+    psql -U postgres
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    \list
+    ``` 
+    You should see thoth present in the list of databases.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Populate Database
 
-## Deploy on Vercel
+- Create tables in Thoth database 
+    ```
+    npx knex migrate:latest
+    ```
+- Seed data into tables
+    ```
+    npx knex seed:run
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Starting the Dev Server
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- If using Yarn 
+    ```
+    yarn dev
+    ```
+- If using npm
+    ```
+    npm start dev
+    ```
+
+# Adding data to database
+
+## Updating database
+- After changing data you must run these 3 commands
+```
+npx knex migrate:rollback
+
+npx knex migrate:latest
+
+npx knex seed:run
+```
+
+## Changing or Adding Shops to the database
+- Navigate to `./knex/seeds/02_shops.js`
+- Add new Shop to end of array
+> **Warning**  
+> If you delete any existing shop data you will have to pull from repository to repopulate data.
+
+### Example Shop data format
+```
+{
+	name: 'ShopName',
+	description: 'ShopDescription',
+	location: 'ShopLocation',
+	contact: 'ShopEmail',
+	branch_id: 1,
+	img: 'ShopImg'
+}
+```
+NOTE: For branch_id ---> 1 = Air Force, 2 = Navy, 3 = Army, 4 = Space Force, 5 = Marines.
+NOTE: For img ---> `ShopImg` needs to match name of png in the `./public/images` folder without the file extension (Case sensitive).
+
+## Changing or Adding Projects to the database
+- Navigate to `./knex/seeds/03_projects.js`
+- Add new Project to end of array
+> **Warning**  
+> If you delete any existing project data you will have to pull from repository to repopulate data.
+
+### Example Project data format
+```
+{
+	shop_id: 1,
+	project_name: 'ProjectName',
+	tags: [
+		'ProjectTags1',
+        'ProjectTags2',
+        'ProjectTags3'
+		],
+	lang: ['ProjectLanguages', 'ProjectLanguages2'],
+	short_desc:
+		"ProjectDescription",
+	project_img: 'ProjectImg'
+}
+```
+NOTE: For shop_id ---> The position in the shop array is the shop id.
+
+Ex: Conjure is the first item in the array so shop_id = 1
+
+NOTE: For img ---> `ProjectImg` needs to match name of png in the `./public/images` folder without the file extension (Case sensitive).
