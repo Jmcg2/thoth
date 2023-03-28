@@ -26,7 +26,7 @@ docker pull postgres
     ```
 - Start the container
     ```
-    docker run --name postgres -e POSTGRES_PASSWORD=thoth -e POSTGRES_DB=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
+    docker run --name postgres -e POSTGRES_PASSWORD=docker -e POSTGRES_DB=thoth -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
     ```
 - Verify Thoth database creation
     ```
