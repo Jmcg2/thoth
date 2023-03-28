@@ -7,7 +7,7 @@ export default function Layout({ children }) {
 	return (
 		<>
 			<Head>
-				<title>Sorftwair Shoops</title>
+				<title>DoD Software Factories</title>
 			</Head>
 			<HeaderMemo />
 			<main>{children}</main>

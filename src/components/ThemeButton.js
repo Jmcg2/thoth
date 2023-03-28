@@ -7,7 +7,7 @@ const ThemeButton = () => {
 
 	useEffect(() => {
 		setMounted(true);
-	}, []);
+	}, [mounted]);
 	const { systemTheme, theme, setTheme } = useTheme();
 
 	const renderThemeChanger = () => {
@@ -17,7 +17,7 @@ const ThemeButton = () => {
 		if (currentTheme === 'dark') {
 			return (
 				<SunIcon
-					className="w-6 h-6"
+					className="w-6 h-10"
 					role="button"
 					onClick={() => setTheme('light')}
 				/>
@@ -25,7 +25,7 @@ const ThemeButton = () => {
 		} else {
 			return (
 				<MoonIcon
-					className="w-6 h-6"
+					className="w-6 h-10"
 					role="button"
 					onClick={() => setTheme('dark')}
 				/>
@@ -33,7 +33,11 @@ const ThemeButton = () => {
 		}
 	};
 
-	return <button className="btn">{renderThemeChanger()}</button>;
+	return (
+		<button className="bg-slate-700 hover:bg-slate-500 text-white font-bold  rounded px-4">
+			{renderThemeChanger()}
+		</button>
+	);
 };
 
 export default ThemeButton;
