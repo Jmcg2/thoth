@@ -19,22 +19,23 @@ const Header = () => {
     <>
       <div className="flex justify-around h-auto w-full top-0 sticky z-10 p-4 bg-slate-600 dark:bg-slate-800">
         <div className="flex justify-between my-auto w-11/12 p-4">
-          <h1
-            className="text-white text-4xl hover:cursor-pointer font-mono font-bold no-underline hover:underline"
+          <Image
+            className="hover:cursor-pointer"
+            src={"/images/thothheader.svg"}
+            alt={"thoth.svg"}
+            height={200}
+            width={200}
             onClick={() => router.push("/")}
-          >
-            THOTH
-            {/* <Image src={"/images/s28.webp"} width={60} height={100}></Image> */}
-          </h1>
+          ></Image>
         </div>
         <div className="flex justify-end my-auto w-11/12 p-4 gap-4">
           <button
-            className="btn"
+            className="btn-conjure"
             onClick={() => {
               router.push("/shops");
             }}
           >
-            Shops
+            Units
           </button>
           <ThemeButton />
         </div>

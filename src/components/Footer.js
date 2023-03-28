@@ -12,7 +12,7 @@ function Footer() {
     <>
       <div
         style={{ minHeight: "23.5vh" }}
-        className="bg-slate-400 dark:bg-slate-900 h-auto w-full flex md:flex-row flex-col justify-around items-center"
+        className="bg-slate-400 dark:bg-slate-900 h-auto w-full flex md:flex-row flex-col justify-around"
       >
         <div className="p-5">
           <ul>
@@ -20,7 +20,7 @@ function Footer() {
               <Image
                 src="/images/conjurelogo.png"
                 height={92}
-                width={174}
+                width={200}
                 alt="conjurelogo"
               ></Image>
             </Link>
@@ -47,7 +47,7 @@ function Footer() {
         <div className="p-5">
           <ul>
             <p className="text-conjure font-bold text-2xl pb-4">
-              Software Factories
+              Software Development Organizations
             </p>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
               <Link href="/shops/Conjure">Conjure</Link>
@@ -97,25 +97,32 @@ function Footer() {
               About Us
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
-              Contact Us - Civ
+              Contact Us
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
-              Contact Us - MIL
+              <Link href={"https://coalition.dso.mil/"}>SFC</Link>
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
-              AF Portal
+              <Link href={"https://software.af.mil/"}>
+                Office of the Chief Software Officer
+              </Link>
             </li>
+
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-conjure2 cursor-pointer">
-              MyPay
+              <Link
+                href={"https://cso-wp-site.staging.dso.mil/software-factories/"}
+              >
+                Department of the Air Force Software Ecosystem
+              </Link>
             </li>
           </ul>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center text-center p-5 bg-slate-400 dark:bg-slate-900">
+      {/* <div className="flex flex-col justify-center items-center text-center p-5 bg-slate-400 dark:bg-slate-900">
         <h1 className="bg-slate-400 dark:bg-slate-900 font-semibold">
           © 2022-2023 All rights reserved
-        </h1>
-      </div>
+        </h1> */}
+      {/* </div> */}
     </>
   );
 }

@@ -33,7 +33,7 @@ const ThemeButton = () => {
     }
   };
 
-  return <button className="btn">{renderThemeChanger()}</button>;
+  return <button className="btn-conjure">{renderThemeChanger()}</button>;
 };
 
 export default ThemeButton;

@@ -29,7 +29,7 @@
 
 
   
-.btn {
+.btn-conjure {
 	@apply bg-slate-700 hover:bg-conjure2 text-white font-bold py-2 px-4 rounded h-10;
 }
 
@@ -38,8 +38,12 @@
 }
 
 .main {
-
+	min-height: calc(100vh - 23.5vh);
 }
+
+.item img {
+	width:100%
+  }
 
 .embla {
   overflow: hidden;
@@ -77,7 +81,7 @@
 	padding: 3px;
   }
 
-.modalTop{
+.modalTopLanding{
 	background: #24316c no-repeat 1em center;
     color: #ffffff;
     font-weight: 400;
@@ -89,7 +93,7 @@
 	display: block;
 }
 
-.modalWrapper {
+.modalWrapperLanding {
     height: 100%;
     width: 100%;
     z-index: 100;
@@ -97,14 +101,14 @@
 	background-color: #e5e7eb;
 }
 
-.modal {
+.modalLanding {
     background-color: #ffffff;
     margin: 100px auto 0 auto;
     width: 42rem;
 	height: auto;
 }
 
-.modalBody {
+.modalBodyLanding {
     color: #251833;
     padding: 38px 21px;
 	display: block;
@@ -145,3 +149,31 @@ li {
     list-style-type: circle;
  }
 
+ .carousel-img{
+	width: 100vw;
+	min-height: calc(100vh - 23.5vh);	
+	height: 60vh;
+ }
+
+ .p-slide{
+	text-align: center;
+	font-size: smaller;
+	/* font-family: "Montserrat", sans-serif; */
+ }
+
+ .carousel{
+	/* display: flex;  */
+	height: 80vh 
+
+ }
+
+ .bottom-right {
+	position: absolute;
+	bottom: 8px;
+	right: 16px;
+	text-align: left;
+    max-width: 90%;
+    background-color: #228be666;
+    border-radius: 10px;
+    padding: 30px;
+  }
