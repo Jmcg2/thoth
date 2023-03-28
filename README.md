@@ -18,7 +18,7 @@ docker pull postgres
 ```
 ---
 
-## Create `Thoth` database in 
+## Create `Thoth` database
 
 - Create the directory for the persistent PostgreSQL data
     ```
