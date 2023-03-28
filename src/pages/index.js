@@ -1,17 +1,28 @@
-import { useRouter } from 'next/router';
+import Landing from "../components/Landing";
+import { useState, useLayoutEffect } from "react";
+import ConjureCarousel from "../components/Carousel";
 
 export default function Home() {
-	const router = useRouter();
-	return (
-		<>
-			<h1>HOMEPAGE</h1>
-			<button
-				className="btn"
-				onClick={() => {
-					router.push('/shops');
-				}}>
-				Shops
-			</button>
-		</>
-	);
+  const [bannerToggle, setBannerToggle] = useState(true);
+
+  useLayoutEffect(() => {
+    sessionStorage.getItem("state") === null
+      ? sessionStorage.setItem("state", true)
+      : setBannerToggle(false);
+  }, [bannerToggle]);
+
+  if (bannerToggle === true) {
+    console.log("here");
+    return (
+      <>
+        <Landing setInputValue={setBannerToggle} />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <ConjureCarousel />
+      </>
+    );
+  }
 }

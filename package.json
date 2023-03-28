@@ -11,10 +11,14 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@heroicons/react": "^2.0.16",
+		"@heroicons/react": "^2.0.13",
+		"@mantine/carousel": "^6.0.4",
 		"axios": "^1.2.1",
+		"bootstrap": "^5.2.3",
 		"concurrently": "^7.6.0",
 		"dotenv": "^16.0.3",
+		"embla-carousel-autoplay": "^7.1.0",
+		"embla-carousel-react": "^7.1.0",
 		"eslint": "8.29.0",
 		"eslint-config-next": "13.0.6",
 		"global": "^4.4.0",
@@ -23,8 +27,10 @@
 		"next-themes": "^0.2.1",
 		"node-mocks-http": "^1.12.1",
 		"react": "18.2.0",
+		"react-bootstrap": "^2.7.2",
 		"react-dom": "18.2.0",
 		"react-hot-toast": "^2.4.0",
+		"react-icons": "^4.8.0",
 		"react-select": "^5.7.0",
 		"sharp": "^0.31.3",
 		"swr": "^2.0.0"
