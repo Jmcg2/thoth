@@ -11,8 +11,11 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@emotion/react": "^11.10.6",
 		"@heroicons/react": "^2.0.13",
 		"@mantine/carousel": "^6.0.4",
+		"@mantine/core": "^6.0.5",
+		"@mantine/hooks": "^6.0.5",
 		"axios": "^1.2.1",
 		"bootstrap": "^5.2.3",
 		"concurrently": "^7.6.0",
