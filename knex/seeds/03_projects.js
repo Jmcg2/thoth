@@ -50,7 +50,7 @@ exports.seed = async function (knex) {
         "Export-Map",
       ],
       lang: ["Javascript", "React", "Html", "Css", "Java", "Spring"],
-      short_desc: "this is a test short short_desc for Soteria",
+      short_desc: "Soteria is an airfield worthiness tracking application designed to display the usability of airstrips in areas that have come under fire.",
       project_img: "soteria",
     },
     {
@@ -74,7 +74,7 @@ exports.seed = async function (knex) {
         "Atomic design",
       ],
       lang: ["Javascript", "Html", "Css", "Ruby", "Shell", "React"],
-      short_desc: "this is a test short short_desc for Glass-House",
+      short_desc: "Glasshouse is a commander's dashboard for monitoring ongoing communications issues, designed for the 375CG.",
       project_img: "glasshouse",
     },
     {
@@ -116,7 +116,7 @@ exports.seed = async function (knex) {
         "Track requests",
       ],
       lang: ["React", "Javascript", "Express"],
-      short_desc: "this is a test short short_desc for Mercury",
+      short_desc: "Mercury is a form-submition and request tracking application designed for use by the Scott AFB Honor Guard in responding to funeral requests.",
       project_img: "mercury",
     },
     {
@@ -181,7 +181,7 @@ exports.seed = async function (knex) {
         "Software-Factory-Library",
       ],
       lang: ["Javascript", "React", "Css", "Html"],
-      short_desc: "this is the best project in Conjure history",
+      short_desc: "Thoth is a collaboration tool developed to reduce redundant efforts across the software development community. It displays software development organizations with a brief description and point of contact, and lists projects each organization has completed. The data is stored in a postgresSQL database with a react front end.",
       project_img: "thoth",
     },
     {
@@ -372,6 +372,187 @@ exports.seed = async function (knex) {
       short_desc:
         "Avolve is a content sharing platform for all Air, Space, and military professionals to explore and view videos, documents, websites, and Learning Paths for their training, education and self-improvement. Content can be contributed by anyone who wishes to share their expertise or interests with other Air, Space, or military professionals, all behind a secure CAC authenticated firewall. Individuals and organizations, enlisted, officers and civilians, are all able to share their knowledge and messages across services, commands, career paths, and geography.",
       project_img: "avolve",
+    },
+    {
+      shop_id: 7,
+      project_name: "Test Management Interface",
+      tags: [
+        "javascript", 
+        "java", 
+        "spring", 
+        "test", 
+        "project",
+        "management",
+      ],
+      lang: ["javascript"],
+      short_desc:
+        "The Test Management Interface web application, also known as TMI, is a project management tool created for the purpose of aiding the ANG AFRC Test Center (AATC) in Tucson, Arizona. The application stores the test project management data in a centralized location, facilitating the collection of all data in one place. The goal of this application is to streamline the test project management process and save both time and resources in the process. TMI is available for the AATC users that create and track test project data. They are able to input project data and information regarding the timeline of each specific project, as well as track its status and generate chart data. Although it is initially designed for the use of a small number of people, the goal is to be able to allow more customizability that makes the application useful for other personnel (project managers, test directors, etc.) to track test project information",
+      project_img: "tmi",
+    },
+    {
+      shop_id: 7,
+      project_name: "Pay Audit Tool",
+      tags: [
+        "javascript", 
+        "react", 
+        "node", 
+        "pay", 
+        "audit",
+        "automation",
+      ],
+      lang: ["javascript"],
+      short_desc:
+        "The Pay Audit Tool web application, also known as PAT, is a tool created to aide the the pay auditing process for the Alaska Air National Guard (AK ANG). The web app will automate pay auditing to ensure that personnel are paid accurately for the various types of military pay (i.e. COLA, Base, SDAP, etc.). This tool will enable unit admins to conduct monthly audits of guardsmen's pay records to identify and resolve any discrepancies quickly. In addition, guardsmen will be able to view their pay components and any flags that arose during the audit, providing transparency and easy access to pay data by pay period. The application will evaluate both historic records of pay as well as continue to monitor current pay as entered into the system. Although the application is initially designed for pay issues discovered by Alaska Air Nation Guard, the goal is to be able to allow for additional customizability and features to be useful for other units to track and manage pay discrepancies.",
+      project_img: "pat",
+    },
+    {
+      shop_id: 8,
+      project_name: "Comet",
+      tags: [
+        "javascript", 
+        "operations", 
+        "scheduling",
+        "crews",
+        "education",
+      ],
+      lang: ["javascript"],
+      short_desc:
+      "Crew Operational Management and Education Tool (COMET), is a web application that replaces the traditional Excel spreadsheets that operation used for crew scheduling. COMET reduces the time to schedule a team and gives Commanders and Leaders within the unit greater oversight of their units. COMET is currently supporting Del 4, Del 6, and Del 8 with plans to expand support to the rest of the Space Force in the future.",
+      project_img: "comet",
+    },
+    {
+      shop_id: 8,
+      project_name: "Decon+",
+      tags: [
+        "javascript", 
+        "cloud", 
+        "laser",
+        "deconfliction",
+      ],
+      lang: ["javascript"],
+      short_desc:
+        "Decon+ is an algorithmic, cloud-based application that provides operational deconfliction of mission-critical space assets from laser operations for the DoD laser community and Laser Clearinghouse.",
+      project_img: "decon",
+    },
+    {
+      shop_id: 8,
+      project_name: "Genesis",
+      tags: [
+        "javascript", 
+        "mission-planning", 
+        "resource-management",
+        "satellite",
+        "allocation",
+      ],
+      lang: ["javascript"],
+      short_desc:
+        "Genesis is a web-based mission management system designed to help track and allocate satellite resources for the US Military Satellite Communications' (MILSATCOM) Milstar and Advanced Extremely High Frequency (AEHF) constellations for the 4th Space Operations Squadron (4 SOPS) and the RSSCs to provide data transparency and visibility across locations, improve daily business processes, and optimize utilization of MILSATCOM resources.",
+      project_img: "genesis",
+    },
+    {
+      shop_id: 8,
+      project_name: "Test and Resource Planning Tool",
+      tags: [
+        "javascript", 
+        "testing", 
+        "resource",
+        "planning",
+        "workflow",
+        "database",
+      ],
+      lang: ["javascript"],
+      short_desc:
+        "Test and Resource Planning tool being developed for STARCOM. The web native application creates a consolidated workflow for the test directors and squadron commanders. The application displays a snapshot of resources such as manning, funding and test events. Test Directors are able to communicate test resources to Squadron and Delta level leadership. The command is also able to query historical data on test resources.",
+      project_img: "trp",
+    },
+    {
+      shop_id: 8,
+      project_name: "TRACER",
+      tags: [
+        "javascript", 
+        "cloud",
+        "administration", 
+        "APIs",
+        "fileshare",
+        "customization",
+      ],
+      lang: ["javascript"],
+      short_desc:
+        "TRACER is a cloud-native web application designed to address administrative focused pain points at DEL 4 and beyond. Built as a basic framework, new features and applications can be added quickly and utilize a set of standard APIs as well as add their own. DEL 4 has added the HyperSpace application to TRACER, allowing users to create a space to share hyperlinks and files.",
+      project_img: "tracer",
+    },
+    {
+      shop_id: 8,
+      project_name: "DARTS",
+      tags: [
+        "javascript", 
+        "cloud",
+        "mission-logging", 
+        "status-monitoring",
+        "satellite",
+        "reporting",
+      ],
+      lang: ["javascript"],
+      short_desc:
+        "DARTS is a cloud-native, local backup server enabled application under development to address operations pain points, primarily focused on increasing efficiency in day-to-day mission handling tasks. Initial feature set is planned to include mission logging, system status monitoring, satellite pass planning, and mission reporting. DARTS is being developed to be a general application and has garnered interest from other Deltas.",
+      project_img: "darts",
+    },
+    {
+      shop_id: 8,
+      project_name: "Space Cockpit",
+      tags: [
+        "space", 
+        "awareness",
+        "UDL", 
+      ],
+      lang: ["Needs Data"],
+      short_desc:
+        "Space Cockpit is a Space Domain Awareness application, showing the current location of space assets using the latest real-time data from the Unified Data Library. Built on user-centered design with feedback from Delta 4 Guardians, it has features operators need, without the complexity or cost of traditional tools. Space Cockpit is built with the warfighter for the warfighter.",
+      project_img: "spacecockpit",
+    },
+    {
+      shop_id: 8,
+      project_name: "IRIS",
+      tags: [
+        "javascript", 
+        "range",
+        "situational-awareness",
+        "planning",
+        "live-data",
+      ],
+      lang: ["Javascript"],
+      short_desc:
+        "The Integrated Range Information and Status (IRIS) is designed to increase situational awareness and support range operations by becoming a central authoritative source of data for the Western Range IRIS is a web-based application that offers operatorsa more efficient process with visual overviews of live data needed for them to track, plan and execute their mission.",
+      project_img: "iris",
+    },
+    {
+      shop_id: 8,
+      project_name: "Discovery Team",
+      tags: [
+        "discovery", 
+        "trends-analysis",
+        "feasibility-studies",
+      ],
+      lang: ["N/A"],
+      short_desc:
+        "The Discovery team of the Delta Discovery portfolio utilizes multiple techniques to perform discoveries with guardians to identify pain points in their operations. They then analyze trends across multiple deltas to determine if a problem area affects multiple squadrons and prioritize a backlog of pain points which are presented to SpOC as feasibility studies of potential solutions.",
+      project_img: "discovery team",
+    },
+    {
+      shop_id: 8,
+      project_name: "Respond",
+      tags: [
+        "SIPR", 
+        "satellite-communication",
+        "monitor",
+        "track",
+        "log",
+        "event-reporting",
+      ],
+      lang: ["Unknown"],
+      short_desc:
+        "Respond is a SIPR-based application augmenting Space Force personnel’s ability to monitor, track, log, and respond to interference events on SatCom signals of interest. It primarily facilitates the management of relevant weapon system and signal data, and the creation and distribution of event reports.",
+      project_img: "respond",
     },
   ]);
 };
