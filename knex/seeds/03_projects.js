@@ -185,6 +185,56 @@ exports.seed = async function (knex) {
       project_img: "thoth",
     },
     {
+      shop_id: 2,
+      project_name: "Digital University",
+      tags: [
+        "Education",
+      ],
+      lang: ["Needs Information"],
+      short_desc: "BESPIN launched the online learning platform DU to provide better technical training. By partnering with online learning vendors, DU offers users the ability to search, start, and complete courses virtually. Since its launch in 2020, Digital University has - Amassed more than 15,800 active users - Made the site accessible with a Common Access Card - Continued to expand course offerings",
+      project_img: "digitalu",
+    },
+    {
+      shop_id: 2,
+      project_name: "AF Gearfit",
+      tags: [
+        "AFWERX",
+        "Cloud",
+        "Feedback",
+        "Gear",
+      ],
+      lang: ["Needs Information"],
+      short_desc: "BESPIN built GearFit, a secure cloud-hosted application, to provide an easy way for users to submit feedback about their gear. It also allows decision makers to view issues and provide support. GearFit has helped - Shape requirements for female bladder relief devices - Inform AFWERX competitions for improved helmets - Get custom oxygen masks for aircrew - Develop female two-piece flight suit (A2CU-F) requirement - Identify safety concerns with gunners' belts",
+      project_img: "gearfit",
+    },
+    {
+      shop_id: 2,
+      project_name: "Kinderspot",
+      tags: [
+        "Education",
+        "Database",
+        "Family"
+      ],
+      lang: ["Needs Information"],
+      short_desc: "Kinderspot is a mobile application that allows military and DoD civilian families to offer and rent short-term childcare in weekly segments at participating Child Development Centers. A web admin portal enables CDC staff to manage data. Since the idea first surfaced in 2019, Kinderspot has - Deployed at nine Air Force bases - Garnered 1,080 users - Started consolidating child care databases across the Air Force",
+      project_img: "kinderspot",
+    },
+    {
+      shop_id: 2,
+      project_name: "IGATM",
+      tags: [
+        "AFWERX",
+        "Communication",
+        "Navigation",
+        "Survelliance",
+        "Resource-Management",
+        "AFWERX",
+      ],
+      lang: ["Needs Information"],
+      short_desc: "iGATM streamlines communication and access to CNS/ATM resources by providing a secure and accessible file-sharing repository. The site enables system program office (SPO) engineers to submit, and CNS/ATM engineers to approve, airworthiness and support requests. So far, iGATM has - Modernized a legacy process reliant on email, phone calls, and other manual tools - Improved resource access for aircraft program offices, avionics engineers, and budget planners across the Air Force - Developed a calendar that houses all CNS/ATM events and allows event notifications and group registrations",
+      project_img: "igatm",
+    },
+    {
       shop_id: 4,
       project_name: "MySquad",
       tags: ["Mobile"],
@@ -503,7 +553,7 @@ exports.seed = async function (knex) {
       tags: [
         "space", 
         "awareness",
-        "UDL", 
+        "UDL (unified data library)", 
       ],
       lang: ["Needs Data"],
       short_desc:
@@ -533,10 +583,10 @@ exports.seed = async function (knex) {
         "trends-analysis",
         "feasibility-studies",
       ],
-      lang: ["N/A"],
+      lang: ["Not Applicable"],
       short_desc:
         "The Discovery team of the Delta Discovery portfolio utilizes multiple techniques to perform discoveries with guardians to identify pain points in their operations. They then analyze trends across multiple deltas to determine if a problem area affects multiple squadrons and prioritize a backlog of pain points which are presented to SpOC as feasibility studies of potential solutions.",
-      project_img: "discovery team",
+      project_img: "discovery",
     },
     {
       shop_id: 8,
